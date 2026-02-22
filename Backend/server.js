@@ -10,11 +10,7 @@ import userRoutes from './Protected_Routes/userRoutes.js';
 import watchlistRoutes from './Protected_Routes/Watchlist.js';
 import JwtAuth from './AUTH/jwt.js'
 connectDB();
-app.use(cors({
-  origin: 'https://movieratingapp7.netlify.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true, 
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use('/',JwtAuth);
