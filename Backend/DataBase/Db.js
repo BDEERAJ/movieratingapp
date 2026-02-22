@@ -1,13 +1,12 @@
 import mongoose from 'mongoose';
-
-(async function(){
+import dotenv from 'dotenv';
+dotenv.config();
+const connectDB = async function(){
   try {
-    const mongoURI = process.env.MONGO_URI ;
-    
+    const mongoURI = process.env.MONGO_URL;    
     const conn = await mongoose.connect(mongoURI);
-    
   } catch (error) {
     process.exit(1); 
   }
-})();
-export default mongoose; 
+};
+export { connectDB, mongoose }; 
