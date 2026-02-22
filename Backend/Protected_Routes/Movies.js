@@ -1,8 +1,9 @@
 import express from 'express';
 import { User, Movie, Review, Watchlist } from '../DataBase/Schema.js';
 import { protect, admin } from '../AUTH/middleWare.js';
+import cors from 'cors';
 const router = express.Router();
-
+router.use(cors())
 router.get('/request', protect, async (req, res) => {
   try {
     const { Page = 1, limit = 10 } = req.query;
