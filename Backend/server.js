@@ -17,5 +17,4 @@ app.use('/movies',moviesRoutes);
 app.use('/api',reviewsRoutes);
 app.use('/apiU',userRoutes);
 app.use('/apiW',watchlistRoutes);
-const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(process.env.PORT || 5000);
