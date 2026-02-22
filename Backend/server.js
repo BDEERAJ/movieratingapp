@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
 const app=express();
+import dotenv from 'dotenv';
+dotenv.config();
 import { connectDB } from './DataBase/Db.js';
 import moviesRoutes from './Protected_Routes/Movies.js';
 import reviewsRoutes from './Protected_Routes/Reviews.js';
@@ -15,4 +17,5 @@ app.use('/movies',moviesRoutes);
 app.use('/api',reviewsRoutes);
 app.use('/apiU',userRoutes);
 app.use('/apiW',watchlistRoutes);
-app.listen(3000);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
