@@ -1,0 +1,137 @@
+        body {
+          background-color: #0b0b0b;
+          color: #ffffff;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          margin: 0;
+          height: 100vh;
+          width: 100vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color-scheme: dark;
+          background-image: radial-gradient(circle at 20% 30%, #1a1a1a 0%, #0b0b0b 100%);
+        }
+
+        .auth-card {
+          width: 450px;
+          background: #141414;
+          border: 1px solid #222;
+          padding: 50px;
+          border-radius: 24px;
+          box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .brand-logo {
+          color: #f5c518;
+          font-weight: 900;
+          font-size: 2rem;
+          letter-spacing: -1.5px;
+          text-align: center;
+          margin-bottom: 30px;
+          display: block;
+        }
+
+        .auth-title {
+          font-size: 1.5rem;
+          font-weight: 800;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .auth-subtitle {
+          color: #666;
+          text-align: center;
+          font-size: 0.9rem;
+          margin-bottom: 35px;
+        }
+
+        .form-label {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #555;
+          letter-spacing: 1px;
+          margin-bottom: 8px;
+        }
+
+        .input-field {
+          background: #000;
+          border: 1px solid #333;
+          color: #fff;
+          padding: 14px 18px;
+          border-radius: 12px;
+          width: 100%;
+          margin-bottom: 20px;
+          transition: 0.2s;
+        }
+
+        .input-field:focus {
+          outline: none;
+          border-color: #f5c518;
+          box-shadow: 0 0 0 4px rgba(245, 197, 24, 0.1);
+        }
+
+        .auth-btn {
+          width: 100%;
+          background: #f5c518;
+          color: #000;
+          border: none;
+          padding: 16px;
+          border-radius: 12px;
+          font-weight: 800;
+          font-size: 1rem;
+          margin-top: 10px;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        .auth-btn:hover {
+          background: #ffda4b;
+          transform: translateY(-2px);
+        }
+
+        .auth-btn:disabled {
+          background: #333;
+          color: #666;
+          cursor: not-allowed;
+          transform: none;
+        }
+
+        .toggle-text {
+          text-align: center;
+          margin-top: 25px;
+          color: #888;
+          font-size: 0.9rem;
+        }
+
+        .toggle-link {
+          color: #f5c518;
+          font-weight: 700;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 5px;
+        }
+
+        .toggle-link:hover {
+          text-decoration: underline;
+        }
+
+        .status-msg {
+          padding: 12px;
+          border-radius: 10px;
+          font-size: 0.85rem;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .msg-error {
+          background: rgba(255, 77, 77, 0.1);
+          color: #ff4d4d;
+          border: 1px solid rgba(255, 77, 77, 0.2);
+        }
+
+        .msg-success {
+          background: rgba(46, 213, 115, 0.1);
+          color: #2ed573;
+          border: 1px solid rgba(46, 213, 115, 0.2);
+        }

@@ -1,0 +1,273 @@
+
+        body {
+          background-color: #0f0f0f;
+          color: #ffffff;
+          font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+          margin: 0;
+          overflow: hidden; /* Prevent page-wide scrolling */
+          color-scheme: dark;
+        }
+
+        /* Navigation Styles */
+        .top-nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 40px;
+          background-color: #000;
+          border-bottom: 1px solid #1a1a1a;
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
+
+        .nav-logo {
+          color: #f5c518;
+          font-weight: 900;
+          font-size: 1.5rem;
+          letter-spacing: -1px;
+          margin: 0;
+          text-decoration: none;
+        }
+
+        .nav-actions {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .highlight-btn {
+          background: #1a1a1a;
+          border: 1px solid #333;
+          color: #fff;
+          padding: 8px 18px;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.85rem;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .highlight-btn:hover {
+          background: #252525;
+          border-color: #f5c518;
+        }
+
+        .profile-btn {
+          width: 40px;
+          height: 40px;
+          background: #222;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #333;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+
+        .profile-btn:hover {
+          border-color: #f5c518;
+          transform: scale(1.05);
+        }
+
+        .desktop-container {
+          width: 97vw;
+          margin: 0 auto;
+          height: calc(100vh - 72px); /* Full height minus nav */
+          display: flex;
+          flex-direction: column;
+          padding: 30px 0 0 0;
+        }
+
+        .page-title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 20px;
+          color: #fff;
+        }
+
+        .main-layout {
+          display: flex;
+          flex: 1;
+          gap: 20px;
+          overflow: hidden;
+        }
+
+        /* Sidebar: Fixed, no scroll */
+        .sidebar-column {
+          width: 300px;
+          flex-shrink: 0;
+        }
+
+        .filter-sidebar {
+          background-color: #1a1a1a;
+          border-radius: 12px;
+          padding: 20px;
+          border: 1px solid #2a2a2a;
+          height: fit-content;
+        }
+
+        /* Movie Section: Only this scrolls */
+        .movies-column {
+          flex-grow: 1;
+          overflow-y: auto;
+          padding-right: 15px;
+          padding-bottom: 50px;
+        }
+
+        /* Custom Scrollbar */
+        .movies-column::-webkit-scrollbar {
+          width: 8px;
+        }
+        .movies-column::-webkit-scrollbar-track {
+          background: #0f0f0f;
+        }
+        .movies-column::-webkit-scrollbar-thumb {
+          background: #333;
+          border-radius: 10px;
+        }
+        .movies-column::-webkit-scrollbar-thumb:hover {
+          background: #444;
+        }
+
+        .filter-section {
+          margin-bottom: 25px;
+        }
+
+        .filter-label {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          color: #666;
+          letter-spacing: 1px;
+          margin-bottom: 12px;
+          font-weight: 700;
+          display: block;
+        }
+
+        .filter-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .filter-item {
+          padding: 8px 12px;
+          cursor: pointer;
+          border-radius: 6px;
+          transition: 0.2s;
+          color: #aaa;
+          font-size: 0.95rem;
+          margin-bottom: 2px;
+        }
+
+        .filter-item:hover {
+          background-color: #252525;
+          color: #fff;
+        }
+
+        .filter-item.active {
+          background-color: #333;
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .search-box {
+          background-color: #252525;
+          border: 1px solid #333;
+          color: #fff;
+          border-radius: 8px;
+          padding: 10px 15px;
+          width: 100%;
+          font-size: 0.9rem;
+          margin-bottom: 10px;
+        }
+
+        .search-box:focus {
+          outline: none;
+          border-color: #444;
+        }
+
+        /* Card styles */
+        .movie-card {
+          background-color: #1a1a1a !important;
+          border: 1px solid #2a2a2a !important;
+          border-radius: 10px !important;
+          transition: transform 0.2s ease;
+          height: 100%;
+          cursor: pointer;
+        }
+
+        .movie-card:hover {
+          transform: translateY(-5px);
+          border-color: #f5c518 !important;
+        }
+
+        .card-img-top {
+          height: 320px;
+          object-fit: cover;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+
+        .card-body {
+          padding: 15px !important;
+        }
+
+        .card-title {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-bottom: 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .rating-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          margin-bottom: 10px;
+        }
+
+        .star-icon {
+          color: #f5c518;
+        }
+
+        .rating-val { font-weight: 700; font-size: 0.9rem; }
+        .rating-total { color: #666; font-size: 0.8rem; }
+
+        .meta-info {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.8rem;
+          color: #888;
+          border-top: 1px solid #2a2a2a;
+          padding-top: 10px;
+        }
+
+        .genre-tag {
+          color: #aaa;
+        }
+
+        .load-more-btn {
+          background: #f5c518;
+          color: #000;
+          font-weight: 800;
+          padding: 12px 30px;
+          border-radius: 30px;
+          border: none;
+          transition: 0.3s;
+        }
+
+        .load-more-btn:hover {
+          background: #ffda4b;
+          transform: translateY(-2px);
+        }
+        
+        .load-more-btn:disabled {
+          background: #555;
+          color: #888;
+          transform: none;
+          cursor: not-allowed;
+        }

@@ -1,0 +1,146 @@
+
+        body {
+          background-color: #0b0b0b;
+          color: #ffffff;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+          margin: 0;
+          color-scheme: dark;
+        }
+
+        .desktop-wrapper {
+          width: 1200px;
+          margin: 0 auto;
+          padding: 60px 20px;
+        }
+
+        /* Profile Header Section */
+        .profile-header {
+          background: #141414;
+          border: 1px solid #222;
+          border-radius: 20px;
+          padding: 40px;
+          margin-bottom: 40px;
+          display: flex;
+          align-items: center;
+          gap: 40px;
+        }
+
+        .avatar-circle {
+          width: 120px;
+          height: 120px;
+          background: linear-gradient(135deg, #f5c518 0%, #ff8a00 100%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3rem;
+          font-weight: 800;
+          color: #000;
+        }
+
+        .user-id-badge {
+          background: #222;
+          color: #888;
+          padding: 4px 12px;
+          border-radius: 6px;
+          font-family: monospace;
+          font-size: 0.85rem;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        .display-name {
+          font-size: 2.5rem;
+          font-weight: 800;
+          margin: 0;
+          letter-spacing: -1px;
+        }
+
+        .edit-input {
+          background: #000;
+          border: 1px solid #444;
+          color: #fff;
+          font-size: 2rem;
+          font-weight: 800;
+          border-radius: 8px;
+          padding: 5px 15px;
+          width: 400px;
+        }
+
+        .edit-btn {
+          color: #f5c518;
+          background: transparent;
+          border: 1px solid #f5c518;
+          padding: 5px 15px;
+          border-radius: 8px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+
+        .edit-btn:hover {
+          background: #f5c518;
+          color: #000;
+        }
+
+        /* Review List Section */
+        .section-label {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #555;
+          margin-bottom: 25px;
+          display: block;
+          font-weight: 800;
+        }
+
+        .review-card {
+          background: #141414;
+          border: 1px solid #222;
+          border-radius: 16px;
+          padding: 25px;
+          margin-bottom: 20px;
+          transition: 0.2s;
+        }
+
+        .review-card:hover {
+          border-color: #333;
+          transform: translateX(5px);
+        }
+
+        .review-movie {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #fff;
+          margin-bottom: 5px;
+        }
+
+        .review-meta {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+          font-size: 0.85rem;
+          color: #666;
+        }
+
+        .star-rating {
+          color: #f5c518;
+          font-weight: 800;
+        }
+
+        .review-text {
+          color: #bbb;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .no-reviews {
+          text-align: center;
+          padding: 60px;
+          background: #111;
+          border-radius: 20px;
+          color: #444;
+          border: 1px dashed #222;
+        }
