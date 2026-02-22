@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './MoviePage.css';
-const API_BASE_URL = 'http://localhost:3000/';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com/';
 
 export default function App() {
   let location = useLocation();

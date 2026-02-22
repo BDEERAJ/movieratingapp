@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Auth.css';
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
 
 
 export default function App() {

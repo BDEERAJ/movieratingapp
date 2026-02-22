@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Profile.css';
-const API_BASE_URL = 'http://localhost:3000/apiU';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
 
 export default function App() {
   const [user, setUser] = useState(null);

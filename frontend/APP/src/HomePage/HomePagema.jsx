@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css';
 import { useNavigate } from 'react-router-dom';
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
 
 export default function App() {
   const Navigate=useNavigate();
