@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Auth.css';
 const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
-
-
+import { useNavigate } from 'react-router-dom';
 export default function App() {
-  const [mode, setMode] = useState('login'); // 'login' or 'signup'
+  const [mode, setMode] = useState('login'); 
+  // 'login' or 'signup'
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -59,9 +60,9 @@ export default function App() {
           if (mode === 'signup') {
             setMode('login');
           } else {
-             window.location.href = '/Home'; // Or use your router navigation
+             navigate('/Home'); 
           }
-        }, 1500);
+        }, 1500);c
       }
     } catch (err) {
       console.error(err);
