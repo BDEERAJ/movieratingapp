@@ -180,13 +180,13 @@ export default function App() {
                         
                         <div className="rating-row">
                           <span className="star-icon">★</span>
-                          <span className="rating-val">{movie.averageRating || movie.rating || 0}</span>
+                          <span className="rating-val text-white">{movie.averageRating || movie.rating || 0}</span>
                           {movie.numReviews > 0 && <span className="rating-total">({movie.numReviews})</span>}
                         </div>
 
                         <div className="meta-info">
-                          <span>{movie.year}</span>
-                          <span className="genre-tag">{movie.genre}</span>
+                          <span className='text-white'>{movie.year}</span>
+                          <span className="genre-tag text-white">{movie.genre}</span>
                         </div>
                       </div>
                     </div>
