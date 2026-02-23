@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './watchList.css';
-const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com/apiW';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -25,7 +25,7 @@ export default function App() {
     }
 
     try {
-      const response = await fetch(`${API_BASE_URL}/users/${userId}/watchlist`, {
+      const response = await fetch(`${API_BASE_URL}/apiW/users/${userId}/watchlist`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
