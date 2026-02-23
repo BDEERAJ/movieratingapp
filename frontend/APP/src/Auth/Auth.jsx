@@ -62,7 +62,7 @@ export default function App() {
           } else {
              navigate('/Home'); 
           }
-        }, 1500);c
+        }, 1500);
       }
     } catch (err) {
       console.error(err);
