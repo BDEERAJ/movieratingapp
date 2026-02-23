@@ -23,7 +23,7 @@ export default function App() {
       }
 
       try {
-        const response = await fetch(`${API_BASE_URL}/users/${userId}`, {
+        const response = await fetch(`${API_BASE_URL}/apiU/users/${userId}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -35,7 +35,6 @@ export default function App() {
 
         const data = await response.json();
         setUser(data);
-        console.log(data);
         
         setNewName(data.username);
       } catch (err) {
@@ -61,7 +60,7 @@ export default function App() {
     const userId = localStorage.getItem('userId');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/users/${userId}`, {
+      const response = await fetch(`${API_BASE_URL}/apiU/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,

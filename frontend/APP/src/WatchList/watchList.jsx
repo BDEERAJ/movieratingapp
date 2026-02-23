@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './watchList.css';
-const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com';
+const API_BASE_URL = 'https://movieratingapp-dx5u.onrender.com/apiW';
 import { useNavigate } from 'react-router-dom';
 
 
