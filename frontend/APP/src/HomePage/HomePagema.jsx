@@ -176,12 +176,12 @@ export default function App() {
                     <div className="card movie-card" onClick={()=>{Navigator(movie)}}>
                       <img src={movie.imageUrl} className="card-img-top" alt={movie.title} />
                       <div className="card-body">
-                        <h5 className="card-title" title={movie.title}>{movie.title}</h5>
+                        <h5 className="card-title text-white" title={movie.title}>{movie.title}</h5>
                         
                         <div className="rating-row">
                           <span className="star-icon">★</span>
                           <span className="rating-val text-white">{movie.averageRating || movie.rating || 0}</span>
-                          {movie.numReviews > 0 && <span className="rating-total">({movie.numReviews})</span>}
+                          {movie.numReviews > 0 && <span className="rating-total text-white">({movie.numReviews})</span>}
                         </div>
 
                         <div className="meta-info">
