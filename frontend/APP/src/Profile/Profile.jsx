@@ -10,6 +10,7 @@ export default function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [newName, setNewName] = useState("");
   const [updateLoading, setUpdateLoading] = useState(false);
+  const [deletingReviewId, setDeletingReviewId] = useState(null);
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -83,6 +84,40 @@ export default function App() {
     }
   };
 
+  const handleDeleteReview = async (reviewId) => {
+    if (!window.confirm('Are you sure you want to delete this review?')) {
+      return;
+    }
+
+    setDeletingReviewId(reviewId);
+    const token = localStorage.getItem('token');
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/apiU/reviews/${reviewId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) throw new Error("Failed to delete review");
+
+      // Remove the deleted review from the state
+      setUser(prev => ({
+        ...prev,
+        reviews: prev.reviews.filter(review => review._id !== reviewId)
+      }));
+      
+      alert('Review deleted successfully!');
+    } catch (err) {
+      console.error(err);
+      alert('Error deleting review. Please try again.');
+    } finally {
+      setDeletingReviewId(null);
+    }
+  };
+
   if (loading) return <div className="p-5 text-center text-white">Loading your profile...</div>;
   if (error) return <div className="p-5 text-center text-danger">{error}</div>;
 
@@ -130,7 +165,16 @@ export default function App() {
               <div className="review-card" key={review._id}>
                 <div className="d-flex justify-content-between align-items-start">
                   <h3 className="review-movie">{review.movieId.title}</h3>
-                  <span className="text-secondary small">{new Date(review.createdAt).toLocaleDateString()}</span>
+                  <div className="d-flex align-items-center gap-2">
+                    <span className="text-secondary small">{new Date(review.createdAt).toLocaleDateString()}</span>
+                    <button 
+                      className="btn btn-sm btn-danger" 
+                      onClick={() => handleDeleteReview(review._id)}
+                      disabled={deletingReviewId === review._id}
+                    >
+                      {deletingReviewId === review._id ? 'Deleting...' : 'Delete'}
+                    </button>
+                  </div>
                 </div>
                 
                 <div className="review-meta">
